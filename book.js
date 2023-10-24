@@ -19,6 +19,15 @@ function addBookToLibrary(newBook) {
     myLibrary.push(newBook);
 }
 
+function displayBooks() {
+    for (const book of myLibrary)
+    {
+        const newDiv = document.createElement("div");
+        newDiv.textContent = book.info();
+        container.appendChild(newDiv);
+    }
+    
+}
 const Book1 = new Book(
     "The book",
     "Unknown author",
@@ -26,4 +35,15 @@ const Book1 = new Book(
     "not read"
 );
 
+const Book2 = new Book(
+    "Super Book",
+    "I Wrote it",
+    40,
+    "read"
+);
+
 addBookToLibrary(Book1);
+addBookToLibrary(Book2);
+const container = document.querySelector(".container")
+
+
