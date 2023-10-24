@@ -14,3 +14,16 @@ function Book(
         return(`${title} by ${author}, ${numPages} pages, ${read}`);
     }
 }
+
+function addBookToLibrary(newBook) {
+    myLibrary.push(newBook);
+}
+
+const Book1 = new Book(
+    "The book",
+    "Unknown author",
+    100,
+    "not read"
+);
+
+addBookToLibrary(Book1);
