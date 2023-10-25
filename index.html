@@ -8,6 +8,37 @@
     <script src="book.js" defer></script>
 </head>
 <body>
+    <dialog>
+        <div class="form-container">
+            <label for="title">
+                <span>Book Title</span>
+            </label>
+            <input type="text" id="title" name="title" required/>
+
+            <label for="author">
+                <span>Book Author</span>
+            </label>
+            <input type="text" id="author" name="author" required/>
+
+            <label for="npages">
+                <span>Number of Pages</span>
+            </label>
+            <input type="text" id="npages" name="npages" required/>
+            
+            <label for="status">
+                <span>Read?</span>
+            </label>
+            <input type="checkbox" id="status" name="status" required/>
+            <button type="submit" class="new-book-btn">Add Book to Library</button>
+        </div>
+        <button autofocus>Close</button>
+    </dialog>
+    <div class="top-bar">
+        <button class="add-button">
+           + Add book 
+        </button>
+        
+    </div>
     <div class="container">
         
     </div>

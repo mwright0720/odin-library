@@ -23,27 +23,26 @@ function displayBooks() {
     for (const book of myLibrary)
     {
         const newDiv = document.createElement("div");
+        newDiv.classList.add("book-card");
         newDiv.textContent = book.info();
         container.appendChild(newDiv);
     }
     
 }
-const Book1 = new Book(
-    "The book",
-    "Unknown author",
-    100,
-    "not read"
-);
 
-const Book2 = new Book(
-    "Super Book",
-    "I Wrote it",
-    40,
-    "read"
-);
+const container = document.querySelector(".container");
 
-addBookToLibrary(Book1);
-addBookToLibrary(Book2);
-const container = document.querySelector(".container")
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + div>button");
+const closeButton = document.querySelector("dialog button");
+const newBookButton = document.querySelector(".new-book-btn");
 
 
+
+showButton.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+    dialog.close();
+});
